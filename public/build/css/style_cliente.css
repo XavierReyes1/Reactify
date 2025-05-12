@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    -webkit-tap-highlight-color: transparent; /* Evita el resaltado azul en tap en móviles/tablets */
+}
+
+.survey-container {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 700px; /* Ajustado para tablets */
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.satisfaction-scale {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinea items por la parte superior */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que los emojis se envuelvan en pantallas más pequeñas */
+}
+
+.emoji-option {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px; /* Ancho mínimo para cada opción */
+    margin: 5px;
+}
+
+.emoji-option:hover {
+    transform: scale(1.1);
+}
+
+.emoji-option.selected {
+    background-color: #e0f7fa; /* Un azul claro suave */
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+}
+
+.emoji {
+    font-size: 3.5em; /* Tamaño de emoji más grande para tablets */
+    margin-bottom: 8px;
+}
+
+.emoji-label {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.area-selection {
+    margin-bottom: 30px;
+}
+
+.area-selection label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.area-selection select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.aspect-selection {
+    margin-bottom: 30px;
+}
+
+.aspect-selection h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.aspect-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.aspect-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 12px 20px;
+    font-size: 0.95em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.aspect-button:hover {
+    background-color: #e0e0e0;
+}
+
+.aspect-button.selected {
+    background-color: #4CAF50; /* Verde para positivo */
+    color: white;
+    border-color: #388E3C;
+}
+
+.aspect-button.negative.selected {
+    background-color: #f44336; /* Rojo para negativo */
+    color: white;
+    border-color: #d32f2f;
+}
+
+
+.comment-field {
+    margin-bottom: 30px;
+}
+
+.comment-field label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.comment-field textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 60%;
+    max-width: 250px;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.thank-you-message h1 {
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+.thank-you-message p {
+    font-size: 1.2em;
+}
+
+/* Ocultar elementos por defecto */
+#aspectsSection, #commentSection, #submitButton, #finalMessage {
+    display: none;
+}

@@ -1,0 +1,19 @@
+{
+    "name": "axelreyes/mvc-feedback",
+    "description": "Proyecto de encuentas para nivel sastifaccion del cliente",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "XavierReyes1",
+            "email": "100733023+XavierReyes1@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
